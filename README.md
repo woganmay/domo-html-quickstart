@@ -23,7 +23,8 @@ This quickstart is compatible with the latest version of the Domo Dev Studio, an
 # Getting started
 
 1. Ensure you have the Domo Dev Studio installed, as per the [official instructions](https://developer.domo.com/domo-apps/get-started)
-1. Download and extract a copy of this project here ([master.zip](https://github.com/woganmay/domo-html-quickstart/archive/master.zip))
+1. Download a copy of this project here ([master.zip](https://github.com/woganmay/domo-html-quickstart/archive/master.zip))
+1. Extract it, and inside the folder, edit `manifest.json` to set your app name and version
 1. In the folder, `git init` or set up other source control
 1. Run `domo dev` to start the local dev server
 1. Run `domo publish` to push your app to the server
