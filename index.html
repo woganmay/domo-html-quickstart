@@ -1,0 +1,128 @@
+<html>
+  <head>
+      
+    <!-- Libraries -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/select2.min.css" />
+    
+    <!-- App-specific -->
+    <link rel="stylesheet" href="css/select2-domogrey.css" />
+    <link rel="stylesheet" href="css/domoish.css" />
+    <link rel="stylesheet" href="css/context-menu.css" />
+    <link rel="stylesheet" href="css/app.css" />
+  </head>
+  <body>
+    
+    <div id="app-content">
+    
+        <!-- Sidebar -->
+        <div id="app-sidebar" style="height: 100%;">
+          <div class="sidebar-button">
+              <span class="fa fa-wrench fa-2x"></span>
+          </div>
+        </div>
+        <!-- /Sidebar -->
+        
+        <!-- Flyover Menu -->
+        <div id="app-flyover">
+            <div class="drawerOption">
+                <div class="drawerTitle">Select Name</div>
+                <select id="selectElement" style="width: 250px;"></select>
+            </div>
+            <div class="drawerOption">
+                <button class="fakeDomoButton" id="apply-changes-btn">Apply Changes</button>
+            </div>
+        </div>
+        <!-- /Flyover Menu -->
+        
+        <!-- Header -->
+        <div id="app-context">
+            <div id="context-switcher">
+                <ul>
+                    <li data-page="default"><a href="javascript:pageDefault()">Welcome</a></li>
+                    <li data-page="data"><a href="javascript:pageData()">Data</a></li>
+                    <li data-page="about"><a href="javascript:pageAbout()">About</a></li>
+                    <!--<li><a href="javascript:alert('context3')">Context 3</a></li>-->
+                    <!-- Leave this here -->
+                    <li class="highlight" id="slip-nav"></li>
+                </ul>
+            </div>
+        </div>
+        <!-- /Header -->
+      
+        <!-- Header -->
+        <div id="app-header">
+            <h2 id="app-title"><!-- Main Title --></h2>
+            <p id="app-subtitle"><!-- Subtitle --></p>
+            <div class="domospinner"></div>
+        </div>
+        <!-- /Header -->
+        
+        <!-- Body -->
+        <div id="app-body"></div>
+        <!-- /Body -->
+        
+    </div>
+    
+    <!-- Libraries -->
+    <script type="text/javascript" src="js/jquery-1.12.0.min.js"></script>  
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/select2.full.min.js"></script>
+    <script type="text/javascript" src="js/context-menu.js"></script>
+        
+    <!-- Register all the pages -->
+    <script type="text/javascript" src="pages/default.js"></script>
+    <script type="text/javascript" src="pages/about.js"></script>
+    <script type="text/javascript" src="pages/data.js"></script>
+    
+    <!-- App JS -->
+    <script type="text/javascript" src="js/domo.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    
+    <!-- Wire up the sidebar -->
+    <script type="text/javascript">
+       
+       // Display the Sidebar when the sidebar-button is clicked
+       $('.sidebar-button').click(function() {
+            if ($("#app-flyover").hasClass('open')) {
+                $("#app-flyover").animate({ left: -240 }, 300, 'easeInCubic').removeClass('open');
+            }
+            else {
+                $("#app-flyover").animate({ left: 50 }, 300, 'easeOutCubic').addClass('open');
+            }
+	   });
+       
+       // Handle when the Apply button is clicked
+       $("#apply-changes-btn").click(function(){
+           
+           // TODO: Add in the changes you want to propagate here
+           
+           // Close the flyover
+           $("#app-flyover").animate({ left: -241 }, 300, 'easeInCubic').removeClass('open');
+           
+       });
+        
+        // Apply the theme as a global default
+        $.fn.select2.defaults.set("theme", "domogrey");
+        
+        // Enable Select2 on the dropdown
+        $("#selectElement").select2({
+            data: [ { text: 'Option 1', id: 1 }, { text: 'Option 2', id: 2 }, { text: 'Option 3', id: 3 } ]
+        });
+        
+        // On Ready!
+        $(function(){
+            
+            // Build the initial menu
+            sse1.buildMenu();
+            
+            // Load the welcome page
+            pageDefault();
+            
+        });
+            
+    </script>
+    
+  </body>
+</html>

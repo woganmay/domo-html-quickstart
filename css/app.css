@@ -1,0 +1,24 @@
+body{
+  margin: 0;
+}
+
+#app-fade {
+    position: absolute;
+    background: #fff;
+    left: 50px;
+    top: 110px;
+    width: 880px;
+    height: 720px;
+    z-index: 1000;
+    opacity: 0;
+}
+
+.domospinner {
+    height: 48px;
+    width: 48px;
+    background: url('../img/domospinner.gif') center center no-repeat;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: none;
+}

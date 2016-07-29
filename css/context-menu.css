@@ -1,0 +1,50 @@
+/**
+ * Float Line Menu
+ * Adapted from: http://www.menucool.com/horizontal/menu-code?menu=1&skin=2&p=1
+ */
+
+#context-switcher ul 
+{ 
+    position: relative;
+    list-style-type: none;
+    float: left;
+    padding: 0;
+    margin: 0;
+}
+
+#context-switcher li
+{
+    float:left;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-image: none;
+}
+
+#context-switcher li.highlight
+{
+    background-color:#000;
+    top: 38px;
+    height: 2px;
+    z-index: 2;
+    position: absolute;
+    overflow: hidden;
+}
+
+#context-switcher li a
+{
+    box-sizing: content-box;
+    height: 30px;
+    padding-top: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0 12px;
+    color: #000;
+    font: normal 12px arial;
+    text-align: center;
+    text-decoration: none;
+    float: left;
+    display: block;
+    position: relative;
+    z-index: 2;
+}

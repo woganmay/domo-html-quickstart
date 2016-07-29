@@ -1,0 +1,147 @@
+/**
+ * Domoish CSS
+ *
+ * Replicates the look and feel of 2015-generation Design Studio apps, using HTML and CSS
+ *
+ * @author Wogan May <wogan.may@gmail.com>
+ */
+
+body {
+    margin: 0px;
+    font-family: "Open Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+#app-content {
+    overflow: auto;
+    position: absolute;
+    height: 830px;
+    width: 930px;
+}
+
+#app-body {
+    position: absolute;
+    left: 50px;
+    top: 110px;
+    width: 880px;
+    height: 720px;
+    overflow: auto;
+}
+
+#app-context {
+    height: 40px;
+    position: absolute;
+    top: 0px;
+    left: 62px;
+    width: 863px;
+}
+
+#app-header {
+    font-size: 18px;
+    font-weight: normal;
+    color: #555555;
+    height: 68px;
+    position: absolute;
+    background: #f2f2f2;
+    width: 880px;
+    top: 40px;
+    left: 50px;
+    border-top: #e5e5e6 solid 1px;
+    border-bottom: #e5e5e6 solid 1px;
+}
+
+#app-title {
+    font-size: 18px;
+    text-transform: uppercase;
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#app-subtitle {
+    font-size: 12px;
+    color: #888888;
+    position: absolute;
+    top: 40px;
+    left: 16px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#app-sidebar {
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    height: 830px;
+    width: 49px;
+    z-index: 100;
+    border-right: 1px solid #e5e5e6;
+    background: #f2f2f2;
+}
+
+div.sidebar-button {
+    width: 50px;
+    text-align: center;
+    margin: 16px 0px;
+    cursor: pointer;
+    color: #c6c6c6;
+}
+
+div.sidebar-button:hover {
+    color: #808080;
+}
+
+#app-flyover {
+    position: absolute;
+    top: 0px;
+    left: -241px;
+    /* Starting Position */
+    width: 250px;
+    height: 798px;
+    z-index: 50;
+    background: #e3e3e3;
+    opacity: 1;
+    padding: 32px 20px 0px 20px;
+    border-right: #e3e3e3 solid 1px;
+    border-left: #e3e3e3 solid 1px;
+}
+
+.fakeDomoButton {
+    color: white;
+    background: #fc9927;
+    border: 1px solid #fc9927;
+    font-weight: 700;
+    padding: 6px;
+    font-size: 11px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.drawerOption {
+    margin-bottom: 16px;
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    font-size: 10px;
+}
+
+.drawerTitle {
+    margin-bottom: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #333;
+    font-size: 10px;
+}
+
+.well {
+  min-height: 20px;
+  padding: 19px;
+  margin-bottom: 20px;
+  background-color: #f5f5f5;
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+}
