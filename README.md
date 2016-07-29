@@ -1,5 +1,7 @@
 # HTML Quickstart
 
+![App screenshot](https://s3-us-west-2.amazonaws.com/files.wogan.me/github/html-quickstart-screenshot.png)
+
 An HTML/JS template that gives you a good starting point for HTML-based Domo Apps.
 
 Note that this is an UNOFFICIAL project, and is not supported by Domo Inc.
